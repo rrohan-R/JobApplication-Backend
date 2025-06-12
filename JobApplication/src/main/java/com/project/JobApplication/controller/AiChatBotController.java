@@ -12,7 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class AiChatBotController {
 
     private static final String WOLFRAM_API_BASE = "https://api.wolframalpha.com/v1/spoken";
-    private static final String APP_ID = "XJE94L-Q9LGGAJVLJ"; // Replace with your actual key
+    private static final String APP_ID = "XJE94L-Q9LGGAJVLJ";
 
     @GetMapping
     public ResponseEntity<String> askWolfram(@RequestParam String question) {
