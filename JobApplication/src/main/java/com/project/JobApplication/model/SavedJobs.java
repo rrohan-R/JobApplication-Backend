@@ -21,8 +21,4 @@ public class SavedJobs {
     private String location;
     private String description;
 
-    @Lob
-    @Column(length = 100000)
-    private byte[] image;
-
 }
