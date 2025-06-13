@@ -64,7 +64,7 @@ public class JobsController {
     public ResponseEntity<String> unsaveJobByJobId(@PathVariable String jobId) {
         Optional<SavedJobs> job = savedJobsService.findByJobId(jobId);
         if (job.isPresent()) {
-            savedJobsService.deleteSavedJob(job.get().getId());  // delete by internal ID
+            savedJobsService.deleteSavedJob(job.get().getId());
             return ResponseEntity.ok("Job unsaved successfully");
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Saved job not found");
